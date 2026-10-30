@@ -7,69 +7,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <nav style="display:flex;gap:1rem;background:#f4f4f4;padding:0.8rem;border-radius:8px;flex-wrap:wrap;margin-bottom:1rem">
-    <a href="index.html" style="text-decoration:none;color:#333;padding:0.3rem 0.6rem">Home</a>
-    <a href="about.html" style="text-decoration:none;color:#333;padding:0.3rem 0.6rem">About</a>
-    <a href="projects.html" style="text-decoration:none;color:#333;padding:0.3rem 0.6rem">Projects</a>
-    <a href="contact.html" style="text-decoration:none;background:#111;color:#fff;padding:0.3rem 0.6rem;border-radius:4px">Contact</a>
-    <a href="box-model-practice.html" style="text-decoration:none;color:#333;padding:0.3rem 0.6rem">Box Model</a> 
-  </nav>
-</header>  
+ <header class="navbar">
+    <div class="nav-logo">Claire Wairimu</div>
+    
+    <!-- Hamburger - CSS only -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-hamburger">☰</label>
+
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="box-model-practice.html">BOX MODEL</a></li>
+    </ul>
+</header>
    
     <main>
-        <section>
-            <h1>Contact Me</h1>
-            <p>I joined IYF to learn different coding languages and apply them - feel free to contact me about my project</p>
-        </section>
-
-        <section>
-            <h2>Send a Message</h2>
-            <form method="post" action="#">
-                <fieldset>
-                    <legend>Personal Information</legend>
-                    <label for="fullname">Full Name *</label>
-                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
-
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
-
-                    <label for="phone">Phone (optional)</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+254 712 345 678">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Message Details</legend>
-                    <label for="subject">Subject *</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">-- Select Subject --</option>
-                        <option value="collaboration">Collaboration</option>
-                        <option value="inquiry">General Inquiry</option>
-                        <option value="feedback">Feedback</option>
-                    </select>
-
-                    <label for="message">Message * (min 50 characters)</label>
-                    <textarea id="message" name="message" placeholder="Write your message here..." required minlength="50" rows="5"></textarea>
-                </fieldset>
-
-                
-                <fieldset>
-    <legend>Preferences</legend>
-    <label for="newsletter" style="display: flex; align-items: center; gap: 8px;">
-        <input type="checkbox" id="newsletter" name="newsletter" style="width: auto; margin: 0;">
-        Subscribe to newsletter
-    </label>
-</fieldset>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-        <section>
-            <hr>
-            <h2>Find Me</h2>
-            <p>Social: <a href="https://github.com/gakuruclaire39-cmd">GitHub</a> | <a href="https://developer.mozilla.org">MDN</a></p>
-            <p> Location: Nairobi | Timezone: EAT (GMT+3)</p>
-        </section>
+      <main>
+<h1 style="padding:1rem;">Contact Me</h1>
+<div class="contact-wrapper">
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" style="padding:0.8rem 1.5rem; background:#4F46E5; color:white; border:none; border-radius:6px;">Send Message</button>
+    </form>
+    <aside class="contact-sidebar">
+        <h3>Contact Info</h3>
+        <p>Email: claire@example.com</p>
+        <p>Location: Nairobi, KE</p>
+        <p>GitHub: @gakuruclaire39-cmd</p>
+    </aside>
+</div>
+</main>
     </main>
     
     <footer>

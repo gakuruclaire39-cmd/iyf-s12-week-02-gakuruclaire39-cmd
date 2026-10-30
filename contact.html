@@ -3,41 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Claire Wairimu</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Me - Claire Wairimu</title>
+    <style>
+    body { font-family: system-ui, sans-serif; max-width: 650px; margin: 2rem auto; padding: 1rem; line-height: 1.5; }
+    fieldset { margin-bottom: 1.5rem; border: 1px solid #ccc; border-radius: 8px; padding: 1rem; }
+    legend { font-weight: bold; padding: 0 0.5rem; }
+    label { display: block; margin-top: 1rem; font-weight: 500; }
+    input, select, textarea { width: 100%; padding: 0.6rem; margin-top: 0.3rem; border-radius: 6px;  border: 1px solid #999; }
+    button { padding: 0.8rem 1.5rem; background: #111; color: white; border: none; border-radius: 6px; cursor: pointer; margin-top: 1rem; }
+    button:hover { background: #333; } 
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html" class="active">Contact</a>
-        </nav>
-    </header>
+<header>
+  <nav style="display:flex;gap:1rem;background:#f4f4f4;padding:0.8rem;border-radius:8px;flex-wrap:wrap;margin-bottom:1rem">
+    <a href="index.html" style="text-decoration:none;color:#333;padding:0.3rem 0.6rem">Home</a>
+    <a href="about.html" style="text-decoration:none;color:#333;padding:0.3rem 0.6rem">About</a>
+    <a href="projects.html" style="text-decoration:none;color:#333;padding:0.3rem 0.6rem">Projects</a>
+    <a href="contact.html" style="text-decoration:none;background:#111;color:#fff;padding:0.3rem 0.6rem;border-radius:4px">Contact</a>
+  </nav>
+</header>  
+   
     <main>
         <section>
             <h1>Contact Me</h1>
-            <p>Email: <a href="mailto:gakuruclaire39@gmail.com">gakuruclaire39@gmail.com</a></p>
-            <p>Phone: +254 712 345 678</p>
-            
+            <p>I joined IYF to learn different coding languages and apply them - feel free to contact me about my project</p>
+        </section>
+
+        <section>
+            <h2>Send a Message</h2>
             <form method="post" action="#">
                 <fieldset>
-                    <legend>Send a message</legend>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    
-                    <button type="submit">Send</button>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                    <label for="phone">Phone (optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+254 712 345 678">
                 </fieldset>
-            </form>
-        </section>
-    </main>
-    <footer><p>&copy; 2026 Claire Wairimu</p></footer>
-</body>
-  </html>
+
+                <fieldset>
+                    <legend>Message Details</legend>
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Select Subject --</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="inquiry">General Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+
+                    <label for="message">Message * (min 50 characters)</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required minlength="50" rows="5"></textarea>
+                </fieldset>

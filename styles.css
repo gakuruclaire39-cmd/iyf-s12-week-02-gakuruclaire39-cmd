@@ -296,3 +296,139 @@ header nav a.active {
 .card h3 { margin-bottom: 15px; }
 .card p { margin-bottom: 1rem; }
 .card button { width: 100%; padding: 0.7rem; background: #111; color: #fff; border: none; border-radius: 6px; }
+
+/* ===== Task 3.1 Reset + Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Task 3.3 + 3.4: Typography + Color System ===== */
+:root {
+    /* Type Scale */
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 1.875rem;
+    --font-4xl: 2.25rem;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Task 3.4 Color System - Generated with Coolors */
+    --color-primary: #4F46E5; /* Primary - Indigo - main brand */
+    --color-secondary: #06B6D4; /* Secondary - Cyan - accent */
+    --color-background: #FAFAF9; /* Background - warm light */
+    --color-text: #1C1917; /* Text - dark stone */
+    --color-muted: #78716C; /* Muted/gray */
+    
+    /* Variations */
+    --color-primary-light: #818CF8;
+    --color-primary-dark: #3730A3;
+    --color-secondary-light: #22D3EE;
+    --color-white: #FFFFFF;
+}
+
+/* ===== Apply Colors ===== */
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    line-height: 1.2;
+    font-weight: 700;
+}
+h1 { font-size: var(--font-4xl); }
+h2 { font-size: var(--font-3xl); color: var(--color-primary-dark); }
+h3 { font-size: var(--font-2xl); }
+
+p { font-size: var(--font-base); margin-bottom: 1rem; color: var(--color-text); }
+small, .small-text { font-size: var(--font-sm); color: var(--color-muted); }
+
+/* Links with hover states */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Buttons */
+button, .btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+button:hover, .btn:hover {
+    background-color: var(--color-primary-dark);
+}
+.btn-secondary {
+    background-color: var(--color-secondary);
+}
+.btn-secondary:hover {
+    background-color: var(--color-secondary-light);
+}
+
+/* Header / Backgrounds */
+header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-muted);
+}
+header nav {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.2rem;
+}
+header nav a {
+    font-family: var(--font-heading);
+    font-size: var(--font-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+header nav a:hover, header nav a.active {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* ===== Task 3.2 Box Model (keep) ===== */
+.exercise { margin: 2.5rem 0; padding: 1.5rem; border: 1px dashed var(--color-muted); border-radius: 8px; background: var(--color-white); }
+.box { width: 200px; height: 80px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; margin-bottom: 1rem; }
+.content-box { background: var(--color-primary); }
+.padding-box { background: var(--color-secondary); padding: 20px; background-clip: content-box; border: 20px solid rgba(6,182,212,0.3); }
+.border-box-demo { background: var(--color-primary-light); border: 8px solid var(--color-primary-dark); padding: 10px; }
+.margin-box { background: #f39c12; margin: 30px; }
+.broken-box { width: 300px; padding: 20px; border: none; background: #ffdddd; box-sizing: border-box; }
+.card { width: 300px; padding: 20px; border: 1px solid var(--color-muted); border-radius: 8px; box-sizing: border-box; background: var(--color-white); }
+.card img { width: 100%; display: block; border-radius: 6px; }
+.card h3 { margin-bottom: 15px; }
+.card p { margin-bottom: 1rem; }
+.card button { width: 100%; }
+
+footer {
+    background: var(--color-text);
+    color: var(--color-background);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}

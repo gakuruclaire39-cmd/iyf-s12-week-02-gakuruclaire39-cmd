@@ -4,29 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Claire Wairimu</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{font-family:system-ui;max-width:800px;margin:auto;padding:1rem;line-height:1.6}
+        nav{display:flex;gap:1rem;background:#f4f4f4;padding:0.8rem;border-radius:8px;flex-wrap:wrap}
+        nav a{text-decoration:none;color:#333;padding:0.3rem 0.6rem;border-radius:4px}
+        nav a.active, nav a:hover{background:#111;color:#fff}
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
     </header>
     <main>
         <section>
             <h1>About Me</h1>
-            <p>I am a student at IYF learning web-development. I care about building accessible and semantic websites.I enjoy understanding how systems work and improving them through experimentation and continuous learning</p>
+            <article>
+                <h2>My Background</h2>
+                <p>I joined IYF to become a full-stack web-developer. I am passionate about web foundations: semantic HTML and accessibility first, then CSS and JavaScript.</p>
+            </article>
+        </section>
+        <section>
             <h2>Skills</h2>
             <ul>
-                <li>HTML5 Semantic Structure</li>
-                <li>CSS Fundamentals</li>
-                <li>Git & GitHub</li>
+                <li>HTML5 Semantic Elements</li>
+                <li>Accessibility Audit with Lighthouse & WAVE</li>
+                <li>Git, GitHub, GitHub Pages Deployment</li>
+                <li>Chrome DevTools</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education / Timeline</h2>
+            <ul>
+                <li><strong>2026 - Present:</strong> IYF Weekend Academy - Web Development</li>
+                <li><strong>Week 01:</strong>HTML, Forms, Accessibility </li>
+                <li><strong>Next:</strong> CSS & JavaScript</li>
             </ul>
         </section>
     </main>
     <footer><p>&copy; 2026 Claire Wairimu</p></footer>
 </body>
-      </html>
+</html>

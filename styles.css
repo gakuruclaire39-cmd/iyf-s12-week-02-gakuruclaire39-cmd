@@ -656,3 +656,122 @@ footer {
         grid-column: 1 / -1;
     }
 }
+
+/* ========== Task 4.3: Mobile-First Responsive Design ========== */
+
+/* Mobile first - base styles (320px) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background: white;
+    position: relative;
+}
+.nav-toggle { display: none; }
+.nav-hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block; /* Show on mobile */
+}
+.nav-links {
+    display: none; /* Hidden on mobile */
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    list-style: none;
+    background: white;
+    padding-top: 1rem;
+}
+.nav-links li { padding: 0.8rem 0; border-top: 1px solid #f1f5f9; }
+.nav-toggle:checked ~ .nav-links {
+    display: flex; /* Show when hamburger clicked */
+}
+
+/* Home - Mobile: Single column */
+.hero {
+    display: flex;
+    flex-direction: column; /* single column on mobile */
+    background: linear-gradient(180deg, #000 0%, #1e293b 100%);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    color: white;
+}
+.hero-profile img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Projects - Mobile: 1 column */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column mobile */
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Contact - Mobile: Full-width form */
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+.contact-form { width: 100%; }
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+.contact-sidebar { width: 100%; background: #f8fafc; padding: 1.5rem; border-radius: 8px; }
+
+/* Footer mobile */
+.footer-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    background: #0f172a;
+    color: white;
+}
+
+/* Tablet @ 768px */
+@media (min-width: 768px) {
+    .nav-hamburger { display: none; } /* Hide hamburger on tablet+ */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        width: auto;
+        gap: 1.5rem;
+        padding-top: 0;
+    }
+    .nav-links li { border-top: none; padding: 0; }
+
+    .projects-grid { grid-template-columns: repeat(2, 1fr); } /* 2 cols tablet */
+    .contact-wrapper { flex-direction: row; }
+    .footer-flex { flex-direction: row; flex-wrap: wrap; }
+}
+
+/* Desktop @ 1024px */
+@media (min-width: 1024px) {
+    .hero { flex-direction: row; align-items: center; justify-content: space-between; } /* Hero with side image */
+    .projects-grid { grid-template-columns: repeat(3, 1fr); } /* 3 cols desktop */
+    .contact-wrapper { max-width: 1100px; margin: 0 auto; }
+    .contact-form { flex: 2; }
+    .contact-sidebar { flex: 1; }
+    .navbar { padding: 1rem 2.5rem; }
+}
+
+/* Large Desktop @ 1280px */
+@media (min-width: 1280px) {
+    main, .hero, .projects-grid, .contact-wrapper {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero h1 { font-size: 3rem; }
+}

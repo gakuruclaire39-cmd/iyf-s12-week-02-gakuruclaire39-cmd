@@ -432,3 +432,88 @@ footer {
     text-align: center;
     margin-top: 3rem;
 }
+
+/* ========== Task 4.1 Flexbox Layout ========== */
+
+/* Exercise 1: Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo left, Links right */
+    align-items: center; /* Vertically centered */
+    padding: 1rem 2rem;
+    background: var(--color-white);
+    border-bottom: 1px solid #eee;
+}
+.nav-logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: var(--font-xl);
+    color: var(--color-primary);
+}
+.nav-links {
+    display: flex;
+    gap: 2rem; /* Spacing between links */
+    list-style: none;
+    align-items: center;
+}
+.nav-links a {
+    font-family: var(--font-heading);
+    font-size: var(--font-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+/* Exercise 2: Card Row */
+.card-row {
+    display: flex;
+    justify-content: space-evenly; /* Evenly spaced */
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    padding: 2rem 1rem;
+}
+.card-row .card {
+    flex: 1 1 280px; /* Grow, shrink, base 280px */
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    /* Equal heights - flex stretch by default */
+}
+.card-row .card p {
+    flex-grow: 1; /* Makes content fill to keep buttons aligned */
+}
+
+/* Exercise 3: Footer Layout */
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 3rem 2rem 1rem;
+    background: var(--color-text);
+    color: var(--color-background);
+}
+.footer-col {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.footer-col h4 {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+}
+.footer-col a {
+    color: var(--color-muted);
+    font-size: var(--font-sm);
+}
+.footer-copyright {
+    width: 100%;
+    text-align: center; /* Centered */
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    font-size: var(--font-sm);
+    color: var(--color-muted);
+}

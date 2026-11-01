@@ -899,3 +899,14 @@ html { scroll-behavior: smooth; }
     color: white;
     text-decoration: underline;
 }
+
+footer {
+  background-color: #1e293b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+footer p {
+  color: white;
+}

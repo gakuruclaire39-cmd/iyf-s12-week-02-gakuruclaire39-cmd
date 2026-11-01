@@ -910,3 +910,74 @@ footer {
 footer p {
   color: white;
 }
+
+/* ===== DAILY CHALLENGES ===== */
+
+/* Day 1: Button Styles - 4 variants */
+.btn-primary { background:#4F46E5; color:white; }
+.btn-secondary { background:transparent; border:2px solid #4F46E5; color:#4F46E5; }
+.btn-secondary:hover { background:#4F46E5; color:white; }
+.btn-danger { background:#DC2626; color:white; }
+.btn-danger:hover { background:#B91C1C; transform:translateY(-2px); }
+.btn-disabled, button:disabled { background:#9CA3AF; color:#6B7280; cursor:not-allowed; opacity:0.6; }
+
+/* Day 3: Hero Section - full viewport */
+.hero-daily {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+.hero-daily h1 { font-size: clamp(2rem, 5vw, 4rem); color:white; }
+.hero-daily p { font-size: clamp(1rem, 2vw, 1.25rem); color:#E5E7EB; }
+
+/* Day 4: Form Styling - custom + error states */
+input, textarea, select {
+  border: 2px solid #E5E7EB;
+  transition: all 0.2s ease;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+  outline: none;
+}
+input:invalid, textarea:invalid {
+  border-color: #DC2626;
+  background: #FEF2F2;
+}
+input:valid, textarea:valid {
+  border-color: #10B981;
+}
+.form-error { color:#DC2626; font-size:0.875rem; margin-top:0.25rem; }
+
+/* Day 5: Footer - 4 cols desktop, 2 tablet, 1 mobile */
+.footer-daily {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 2rem 1rem;
+  background: #0f172a;
+  color: white;
+}
+@media (min-width: 768px) {
+  .footer-daily { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .footer-daily { grid-template-columns: repeat(4, 1fr); }
+}
+.footer-daily .social-icons { display:flex; gap:1rem; font-size:1.5rem; }
+.footer-daily .copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  color: #94a3b8;
+}
